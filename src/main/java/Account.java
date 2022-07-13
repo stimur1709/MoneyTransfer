@@ -32,4 +32,8 @@ public class Account {
                 ", money=" + money +
                 '}';
     }
+
+    public String getId() {
+        return id;
+    }
 }

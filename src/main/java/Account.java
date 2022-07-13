@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Account {
 
-    private String id;
+    private final String id;
     private long money;
 
     public Account(){
@@ -17,15 +17,19 @@ public class Account {
                 .toString();
     }
 
-    public String getId() {
-        return id;
-    }
-
     public long getMoney() {
         return money;
     }
 
     public void setMoney(long money) {
-        this.money = money;
+        this.money += money;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", money=" + money +
+                '}';
     }
 }

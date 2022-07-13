@@ -34,7 +34,7 @@ public class Bank {
             log.error(String.format("Перевод со своего счета на свой счет невозможен. Счет №%s.",
                     accounts.get(fromAccountNum).getId()));
         }
-        if (accounts.get(fromAccountNum).getMoney() < transferAmount){
+        if (accounts.get(fromAccountNum).getMoney() < transferAmount) {
             log.error(String.format("Недостаточно средств для перевода %d рублей на счет №%s. Баланс счета отправителя: %d",
                     transferAmount, accounts.get(toAccountNum).getId(), accounts.get(fromAccountNum).getMoney()));
         }
